@@ -1,0 +1,90 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    font-weight: 600;
+    min-height: 0;
+    border: none;
+}
+
+window#waybar {
+    background: transparent;
+    color: #e2e8f0;
+}
+
+/* ===== Floating module base ===== */
+#workspaces,
+#clock,
+#network,
+#pulseaudio,
+#battery,
+#tray {
+    background: rgba(8, 12, 24, 0.82);
+    margin: 8px 6px 4px 6px;
+    padding: 6px 14px;
+    border-radius: 16px;
+    border: 2px solid rgba(56, 189, 248, 0.45);
+}
+
+/* ===== Workspaces ===== */
+#workspaces {
+    padding: 4px 8px;
+}
+
+#workspaces button {
+    padding: 6px 10px;
+    margin: 0 3px;
+    border-radius: 12px;
+    background: transparent;
+    color: #7dd3fc;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button:hover {
+    background: rgba(56, 189, 248, 0.15);
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    background: linear-gradient(90deg, #0ea5e9, #67e8f9);
+    color: #081018;
+}
+
+/* ===== Clock ===== */
+#clock {
+    color: #fbbf24;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+/* ===== Audio ===== */
+#pulseaudio {
+    color: #67e8f9;
+}
+
+/* ===== Network ===== */
+#network {
+    color: #38bdf8;
+}
+
+/* ===== Battery ===== */
+#battery {
+    color: #22c55e;
+}
+
+#battery.warning {
+    color: #f59e0b;
+}
+
+#battery.critical {
+    color: #ef4444;
+}
+
+/* ===== Tray ===== */
+#tray {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}

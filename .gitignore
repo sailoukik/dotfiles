@@ -1,0 +1,8 @@
+# Dotfiles gitignore
+*.bak
+*.bak_*
+*.old
+*.log
+*.tmp
+.cache/
+__pycache__/

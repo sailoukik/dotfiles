@@ -1,0 +1,60 @@
+# Starship Prompt - Thor God of Thunder Edition (Norse Runes & Electric Accents)
+
+add_newline = false
+
+format = """
+$username$hostname $directory $git_branch $git_status$cmd_duration
+$character"""
+
+[character]
+success_symbol = "[ ᛋ ⚡](bold fg:#FFD700)" # Sowilo (Lightning / Sun Rune)
+error_symbol = "[ ᛋ ](bold fg:#FF5555)"
+
+[username]
+show_always = true
+style_user = "bold fg:#00E5FF"
+style_root = "bold fg:#FF5555"
+format = "[](fg:#1E3A5F)[ᚦ $user](bg:#1E3A5F fg:#FFD700)[](fg:#1E3A5F)" # Thurisaz (Thor's Rune)
+
+[hostname]
+ssh_only = true
+format = "[@$hostname](bold fg:#00E5FF) "
+
+[directory]
+home_symbol = " ᚱ " # Raido (Journey Rune)
+read_only = " "
+style = "bg:#00E5FF fg:#0B0E14 bold"
+truncation_length = 5
+truncation_symbol = "••/"
+format = "[](fg:#00E5FF)[$path]($style)[](fg:#00E5FF)"
+
+[directory.substitutions]
+"Desktop" = "  "
+"Documents" = "  "
+"Downloads" = "  "
+"Music" = " 󰎈 "
+"Pictures" = "  "
+"Videos" = "  "
+"GitHub" = " 󰊤 "
+
+[git_branch]
+symbol = "⚡ "
+format = "[](fg:#FFD700)[$symbol$branch(:$remote_branch)](bg:#FFD700 fg:#0B0E14 bold)[](fg:#FFD700)"
+
+[git_status]
+style = "bold fg:#00E5FF"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+conflicted = " 🏳 "
+ahead = " ⇡${count} "
+behind = " ⇣${count} "
+diverged = " ⇕ "
+untracked = " ? "
+stashed = " 📦 "
+modified = " ⚡ "
+staged = " ++ "
+renamed = " ➜ "
+deleted = " 🗑 "
+
+[cmd_duration]
+min_time = 2_000
+format = "[](fg:#2A354B)[󰪢 $duration](bg:#2A354B fg:#FFD700 bold)[](fg:#2A354B)"
