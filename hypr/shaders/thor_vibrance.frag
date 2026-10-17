@@ -1,12 +1,15 @@
-// Thor Theme Screen Shader
+#version 300 es
+// Thor Theme Screen Shader (Modern GLES 3.0 / Hyprland 0.56+)
 // Enhances electric blues, warm gold highlights, and applies subtle storm atmospheric vignette.
 
 precision mediump float;
-varying vec2 v_texcoord;
+
+in vec2 v_texcoord;
+layout(location = 0) out vec4 fragColor;
 uniform sampler2D tex;
 
 void main() {
-    vec4 pixColor = texture2D(tex, v_texcoord);
+    vec4 pixColor = texture(tex, v_texcoord);
     vec3 c = pixColor.rgb;
 
     // Subtle contrast boost
@@ -28,5 +31,5 @@ void main() {
     float vignette = clamp(1.0 - dot(uv, uv) * 0.15, 0.0, 1.0);
     c *= vignette;
 
-    gl_FragColor = vec4(clamp(c, 0.0, 1.0), pixColor.a);
+    fragColor = vec4(clamp(c, 0.0, 1.0), pixColor.a);
 }
