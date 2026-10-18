@@ -3,8 +3,8 @@
 -------------------------
 local mainMod = "SUPER"
 
--- Standard Apps
-hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("kitty"))
+-- Standard Apps (Super + Return: Kitty with Thunder Animation & Audio Strike)
+hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/launch_kitty.sh"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("brave"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("thunar"))
 
