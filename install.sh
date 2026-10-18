@@ -72,6 +72,7 @@ link_directory "$DOTFILES_DIR/kitty" "$CONFIG_DIR/kitty"
 link_directory "$DOTFILES_DIR/waybar" "$CONFIG_DIR/waybar"
 link_directory "$DOTFILES_DIR/cava" "$CONFIG_DIR/cava"
 link_directory "$DOTFILES_DIR/fastfetch" "$CONFIG_DIR/fastfetch"
+link_directory "$DOTFILES_DIR/rofi" "$CONFIG_DIR/rofi"
 
 # Files
 link_file "$DOTFILES_DIR/starship/starship.toml" "$CONFIG_DIR/starship.toml"

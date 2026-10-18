@@ -1,0 +1,159 @@
+/**
+ * ⚡ THOR GOD OF THUNDER - ROFI THEME
+ * Asgardian Gold, Electric Cyan & Midnight Storm Aesthetics
+ **/
+
+configuration {
+    modi:                       "drun,run,filebrowser";
+    show-icons:                 true;
+    display-drun:               " ⚡ Realm ";
+    display-run:                " 🏃 Execute ";
+    display-filebrowser:        " 📂 Vault ";
+    drun-display-format:        "{name}";
+    font:                       "JetBrains Mono Nerd Font 11";
+    terminal:                   "kitty";
+}
+
+* {
+    /* Thor Color Palette */
+    bg-col:                     #0B0E14E6;
+    bg-col-alt:                 #162032;
+    border-col:                 #00F0FF;
+    border-gold:                #FFD700;
+    selected-col:               #1E3A5F;
+    blue:                       #00F0FF;
+    gold:                       #FFD700;
+    fg-col:                     #E2E8F0;
+    fg-col-dim:                 #8A99AD;
+    grey:                       #2A354B;
+
+    width:                      620;
+    background-color:           transparent;
+    text-color:                 @fg-col;
+    margin:                     0;
+    padding:                    0;
+}
+
+window {
+    transparency:               "real";
+    location:                   center;
+    anchor:                     center;
+    fullscreen:                 false;
+    width:                      640px;
+    x-offset:                   0px;
+    y-offset:                   0px;
+
+    enabled:                    true;
+    margin:                     0px;
+    padding:                    0px;
+    border:                     2px solid;
+    border-color:               @border-col;
+    border-radius:              16px;
+    background-color:           @bg-col;
+    cursor:                     "default";
+}
+
+mainbox {
+    enabled:                    true;
+    spacing:                    15px;
+    margin:                     0px;
+    padding:                    24px;
+    background-color:           transparent;
+    children:                   [ "inputbar", "listview" ];
+}
+
+inputbar {
+    enabled:                    true;
+    spacing:                    10px;
+    margin:                     0px;
+    padding:                    8px 12px;
+    border-radius:              10px;
+    background-color:           @bg-col-alt;
+    border:                     1px solid;
+    border-color:               @grey;
+    text-color:                 @fg-col;
+    children:                   [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                    true;
+    padding:                    4px 10px;
+    border-radius:              6px;
+    background-color:           @gold;
+    text-color:                 #0B0E14;
+    font:                       "JetBrains Mono Nerd Font Bold 10";
+}
+
+entry {
+    enabled:                    true;
+    background-color:           transparent;
+    text-color:                 inherit;
+    cursor:                     text;
+    placeholder:                "Summon application or command... (ᛋ)";
+    placeholder-color:          @fg-col-dim;
+    vertical-align:             0.5;
+}
+
+listview {
+    enabled:                    true;
+    columns:                    1;
+    lines:                      7;
+    cycle:                      true;
+    dynamic:                    true;
+    scrollbar:                  false;
+    layout:                     vertical;
+    reverse:                    false;
+    fixed-height:               true;
+    fixed-columns:              true;
+    
+    spacing:                    6px;
+    margin:                     0px;
+    padding:                    0px;
+    background-color:           transparent;
+    text-color:                 @fg-col;
+    cursor:                     "default";
+}
+
+element {
+    enabled:                    true;
+    spacing:                    12px;
+    margin:                     0px;
+    padding:                    10px 14px;
+    border-radius:              10px;
+    background-color:           transparent;
+    text-color:                 @fg-col;
+    cursor:                     pointer;
+}
+
+element normal.normal {
+    background-color:           transparent;
+    text-color:                 @fg-col;
+}
+
+element alternate.normal {
+    background-color:           transparent;
+    text-color:                 @fg-col;
+}
+
+element selected.normal {
+    background-color:           @selected-col;
+    text-color:                 @gold;
+    border:                     1px solid;
+    border-color:               @blue;
+}
+
+element-icon {
+    background-color:           transparent;
+    text-color:                 inherit;
+    size:                       28px;
+    cursor:                     inherit;
+}
+
+element-text {
+    background-color:           transparent;
+    text-color:                 inherit;
+    highlight:                  inherit;
+    cursor:                     inherit;
+    vertical-align:             0.5;
+    horizontal-align:           0.0;
+}
