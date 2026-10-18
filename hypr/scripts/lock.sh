@@ -6,4 +6,4 @@ if [ -f "$SOUND" ]; then
     pw-play "$SOUND" >/dev/null 2>&1 &
 fi
 
-hyprlock
+hyprlock -c "$HOME/.config/hypr/hyprlock.conf"
